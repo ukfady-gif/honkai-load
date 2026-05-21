@@ -2,53 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Honkai Star Rail PC Pack</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honkai: Star Rail</title>
     <style>
-        body { background-color: #000; color: #fff; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: sans-serif; }
-        .loader { text-align: center; }
+        body { 
+            background: radial-gradient(circle, #2d1b4e, #000); 
+            color: #fff; 
+            display: flex; 
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif; 
+        }
+        .loader-container { text-align: center; }
+        .loader-icon {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #00d4ff;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px auto;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
     </style>
 </head>
 <body>
-    <div class="loader">
-    <div class="loader-icon"></div>
-    <h1>Honkai: Star Rail</h1>
-    <p>Preparing your download link...</p>
-</div>
-    <div class="loader">
-        <h1>Loading Content...</h1>
-        <p>Redirecting to secure download...</p>
+
+    <div class="loader-container">
+        <div class="loader-icon"></div>
+        <h1>Honkai: Star Rail</h1>
+        <p>Preparing your download link...</p>
     </div>
 
     <script>
-        // هنا هتحط رابط العرض بتاعك مكان الرابط اللي بين القوسين
         var offerLink = "https://www.freemmogaming.com/3QZWC1R/697RJRQ/?source_id=TikTok"; 
         
-        // التأخير 1.5 ثانية عشان يبان إن العميل دخل الصفحة وشافها
         setTimeout(function() {
-            window.location.href = offerLink;
+            window.location.replace(offerLink);
         }, 1500);
     </script>
-    <style>
-    body { 
-        background: radial-gradient(circle, #2d1b4e, #000); 
-        color: #fff; 
-        display: flex; 
-        flex-direction: column;
-        justify-content: center; 
-        align-items: center; 
-        height: 100vh; 
-        font-family: 'Segoe UI', sans-serif; 
-    }
-    .loader-icon {
-        border: 4px solid #f3f3f3;
-        border-top: 4px solid #00d4ff;
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        animation: spin 1s linear infinite;
-        margin-bottom: 20px;
-    }
-    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-</style>
 </body>
 </html>
